@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IMC</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input name="poids" type="text" class="ghost-input" placeholder="votre poids en kg" required>
+          <input name="taille" type="text" class="ghost-input" placeholder="votre taille en cm" required>
+          <input type="submit" class="ghost-button" value="Obtenir IMC">
+        </form>
+        <% if(imc !== null){ %>
+          <h3><%= imc %></h3>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+      </fieldset>
+    </div>
+     <footer class="footer">
+            <p>Calcul IMC &copy; by.<a href="mailto:josearthur.oued@outlook.com/">JoSe-ArTHuR</a></p>
+        </footer>
+  </body>
+</html>
